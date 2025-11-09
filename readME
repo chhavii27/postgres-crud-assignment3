@@ -1,12 +1,10 @@
 PostgreSQL CRUD Assignment – Java Application
-
 Author
 ------
 Name: Chhavi Rajpal
 Student ID: 101258832
 Course: COMP3005 – Database Management Systems
 Assignment: 3 – Java + PostgreSQL CRUD
-
 ---------------------------------------------
 Overview
 --------
@@ -21,15 +19,14 @@ postgres-crud-assignment3/
 ■ ■■ java/
 ■ ■■ org/
 ■ ■■ example/
-■ ■■ Main.java # Java code with CRUD operations
+■ ■■ Main.java                                # Java code with CRUD operations
 ■
 ■■ db/
-■ ■■ create_students_table.sql # SQL file to create schema and table with data
+■ ■■ create_students_table.sql                # SQL file to create schema and table with data
 ■
-■■ pom.xml # Maven configuration file
-■■ README.md # Project documentation
-■■ .gitignore # Git ignore rules
-
+■■ pom.xml                                    # Maven configuration file
+■■ README.md                                  # Project documentation
+■■ .gitignore                                 # Git ignore rules
 Java Application Setup
 ----------------------
 1. Prerequisites
@@ -40,9 +37,39 @@ Java Application Setup
 2. Configure Database Connection
 private static final String URL = "jdbc:postgresql://localhost:5432/assignment3";
 private static final String USER = "postgres";
-private static final String PASSWORD = "admin";
+private static final String PASSWORD = "admin"; // your PostgreSQL password
 3. Build and Run
-- Open project in IntelliJ
-- Build → Rebuild Project
-- Run Main.java
-
+Option 1 – Using IntelliJ IDEA
+------------------------------
+1. Open IntelliJ IDEA
+2. File → Open → Select the 'postgres-crud-assignment3' folder
+3. Wait for Maven dependencies to load
+4. Open Main.java inside src/main/java/org/example/
+5. Click the green Run ■ button beside 'public static void main(String[] args)'
+Option 2 – Using Terminal (Maven)
+---------------------------------
+# Navigate to project root
+cd postgres-crud-assignment3
+# Compile the project
+mvn clean compile
+# Run the Java application
+mvn exec:java -Dexec.mainClass="org.example.Main"
+Expected Output
+---------------
+Initial students:
+ID First Last Email EnrollDate
+---------------------------------------------------------------
+1 John Doe john.doe@example.com 2023-09-01
+2 Jane Smith jane.smith@example.com 2023-09-01
+3 Jim Beam jim.beam@example.com 2023-09-02
+Adding a new student...
+Student added successfully.
+Updating John's email...
+Updated 1 row(s).
+Deleting Jim...
+Deleted 1 row(s).
+Final student list:
+---------------------------------------------------------------
+1 John Doe johnny.doe@example.com 2023-09-01
+2 Jane Smith jane.smith@example.com 2023-09-01
+4 Chhavi Rajpal chhavi.rajpal@example.com 2024-09-01
