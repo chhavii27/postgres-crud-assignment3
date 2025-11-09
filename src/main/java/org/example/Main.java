@@ -38,7 +38,7 @@ public class Main {
             e.printStackTrace();
         }
 
-}
+    }
 
     // Add a new student
     public static void addStudent(String first, String last, String email, String date) {
@@ -93,6 +93,15 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Initial students:");
         getAllStudents();
+
+        System.out.println("\nAdding a new student...");
+        addStudent("Chhavi", "Rajpal", "chhavi.rajpal@example.com", "2024-09-01");
+
+        System.out.println("\nUpdating John's email...");
+        updateStudentEmail(1, "johnny.doe@example.com");  // Update by ID
+
+        System.out.println("\nDeleting Jim...");
+        deleteStudent(3);  // Delete by ID
 
         System.out.println("\nFinal student list:");
         getAllStudents();
