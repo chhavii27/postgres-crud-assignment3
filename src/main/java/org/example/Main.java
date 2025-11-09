@@ -95,7 +95,7 @@ public class Main {
         getAllStudents();
 
         System.out.println("\nAdding a new student...");
-        addStudent("Chhavi", "Rajpal", "chhavi.rajpal@example.com", "2024-09-01");
+        addStudent("Chhavi", "Rajpal", "chhavi.rajpal@example.com", "2025-10-27");
 
         System.out.println("\nUpdating John's email...");
         updateStudentEmail(1, "johnny.doe@example.com");  // Update by ID
